@@ -885,7 +885,7 @@ dt {
   background-color: $color_neutral_dark;
   background-image: image-url('homepage-background-small.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   color: $color_white;
   padding: 2em 0 5em;
@@ -902,6 +902,12 @@ dt {
     &:focus {
       color: $color_white;
     }
+  }
+
+  .row {
+    background-color: transparentize($color_black, 0.5);
+    border-radius: 5px;
+    padding: 2em 1.25em;
   }
 
   .intro__title {
