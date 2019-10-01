@@ -11,16 +11,16 @@
 /* General styling of nav menu items */
 %menu-item {
   text-decoration: none;
-  color: transparentize($color_white, 0.2);
+  color: transparentize($color_black, 0.2);
   @include ie8 {
-    color: $color_white;
+    color: $color_black;
   }
   transition: background-color 0.5s ease-out;
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($color_primary, 15%);
-    color: $color_white;
+    background-color: darken($color_primary, 20%);
+    color: $color_black;
   }
 
 }
@@ -28,7 +28,7 @@
 /* Selected menu item */
 %selected-menu-item {
   font-weight: bold;
-  color: $color_primary;
+  color: $color_black;
   background-color: $color_neutral_light;
   &:hover,
   &:active,
@@ -40,7 +40,7 @@
 .js-loaded {
   .account-link {
     &:after {
-      border-top-color: rgba(255,255,255,0.4);
+      border-top-color: $color_black;
     }
   }
 }
@@ -97,17 +97,16 @@
 .sign_in_link,
 .sign_in_link:link,
 .sign_in_link:visited {
-  color: #fff;
+  color: $color_black;
   text-decoration: none;
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
+    color: $color_black
   }
 }
 
 .pro-pill {
-  color: #567386;
   font-weight: 600;
   background-color: #FFFF00;
 }
@@ -312,7 +311,7 @@ a.link_button_green_large {
   border-bottom: none;
   a {
     @extend %menu-item;
-    color: transparentize($color_white, 0.2);
+    color: transparentize($color_black, 0.2);
     @media( min-width: $main_menu-mobile_menu_cutoff ) {
       padding: 0.875em 1em;
     }
@@ -399,8 +398,9 @@ a.link_button_green_large {
 }
 
 p.locale-list-trigger {
+  background-color: darken($color_primary, 10%);
   margin-bottom: 0;
-  color: $color_white;
+  color: $color_black;
   color: rgba(255, 255, 255, 0.8);
   @include respond-min($main_menu-mobile_menu_cutoff) {
     margin-top: 0;
@@ -415,7 +415,7 @@ p.locale-list-trigger {
   position: relative;
   z-index: 999;
   border-radius: 3px;
-  color: $color_white;
+  color: $color_black;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     padding: 0.66em 2em 0.66em 0.66em;
   }
@@ -430,9 +430,9 @@ p.locale-list-trigger {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     @include ie8 {
-      border-top: 5px solid $color_white;
+      border-top: 5px solid $color_black;
     }
-    border-top: 5px solid rgba(255,255,255,0.4);
+    border-top: 5px solid $color_black;
   }
 }
 
@@ -466,7 +466,7 @@ p.locale-list-trigger {
   list-style-type: none;
   border-top: 1px solid rgba(255,255,255,0.2);
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    border-color: $color_dark_grey;
+    border-color: darken($color_primary, 30%);
     display: block;
   }
   &:last-child {
@@ -485,9 +485,9 @@ p.locale-list-trigger {
 .locale-list .available-languages a:visited {
   text-decoration: none;
   transition: background-color 0.5s ease-out;
-  color: #fff;
+  color: $color_black;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: darken($color_dark_grey, 10%);
+    background-color: darken($color_primary, 20%);
     display: block;
     padding: 0.5em 1em;
     width: 100%;
@@ -499,9 +499,9 @@ p.locale-list-trigger {
   border-bottom: none;
   background-color: rgba(0,0,0,0.1);
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: darken($color_mid_grey, 10%);
+    background-color: darken($color_primary, 30%);
   }
-  color: $color_white;
+  color: $color_black;
 
 }
 
@@ -512,11 +512,11 @@ p.locale-list-trigger {
 }
 
 .locale-list.active .current-locale {
-  color: $color_white;
+  color: $color_black;
   border-color: $color_primary;
   @include respond-min($main_menu-mobile_menu_cutoff) {
-    background-color: darken($color_dark_grey, 10%);
-    border-color: $color_black;
+    background-color: darken($color_primary, 15%);
+    border-color: darken($color_primary, 60%);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -524,9 +524,9 @@ p.locale-list-trigger {
 
 .locale-list.active .current-locale:after {
   @include ie8 {
-    border-top-color: $color_white;
+    border-top-color: darken($color_primary, 60%);
   }
-  border-top-color: rgba(255,255,255,0.4);
+  border-top-color: $color_black;
 }
 
   .locale-list .locale-list-trigger,
@@ -885,7 +885,7 @@ dt {
   background-color: $color_neutral_dark;
   background-image: image-url('homepage-background-small.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   color: $color_white;
   padding: 2em 0 5em;
@@ -902,6 +902,12 @@ dt {
     &:focus {
       color: $color_white;
     }
+  }
+
+  .row {
+    background-color: transparentize($color_black, 0.5);
+    border-radius: 5px;
+    padding: 2em 1.25em;
   }
 
   .intro__title {
