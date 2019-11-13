@@ -40,5 +40,8 @@ Rails.configuration.to_prepare do
 
     def database_doorzoeken
     end
+
+    def meer_info_voor_wob_ambtenaren
+    end
   end
 end

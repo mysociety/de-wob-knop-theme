@@ -28,4 +28,6 @@ Rails.application.routes.draw do
   get 'help/database-doorzoeken' => 'help#database_doorzoeken',
       as: :help_database_doorzoeken
 
+  get 'help/meer-info-voor-wob-ambtenaren' => 'help#meer_info_voor_wob_ambtenaren',
+      as: :help_meer_info_voor_wob_ambtenaren
 end
