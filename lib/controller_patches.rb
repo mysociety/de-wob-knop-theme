@@ -31,5 +31,8 @@ Rails.configuration.to_prepare do
 
     def wob_verzoek_versturen
     end
+
+    def na_je_verzoek
+    end
   end
 end
