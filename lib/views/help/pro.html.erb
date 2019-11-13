@@ -1,4 +1,4 @@
-<% @title = 'Pro' %>
+<% @title = 'Voor journalisten' %>
 
 <%= render partial: 'sidebar' %>
 
@@ -7,38 +7,51 @@
     <%= @title %>
   </h1>
 
+  <p>
+    Voor Pro-gebruikers, zoals journalisten, zijn er twee extra functies die
+    het gebruik van de Wob-Knop aantrekkelijk maken:
+  </p>
+
   <ul>
-    <li><%= link_to 'Private requests', '#private-requests' %></li>
-    <li><%= link_to 'Batch', '#batch' %></li>
+    <li><%= link_to 'Afgeschermde verzoeken', '#private-requests' %></li>
+    <li><%= link_to 'Bulkverzoeken', '#batch' %></li>
   </ul>
 
+  <p>
+    De Wob-Knop is in Europa een van de eerste website waarop deze functies
+    gebruikt kunnen worden. Als je vragen of opmerkingen hebt, neem gerust
+    contact met ons op.
+  </p>
+
   <h2 id="private-requests">
-    Private requests
+    Afgeschermde verzoeken
    <a href="#private-requests">#</a>
   </h2>
 
   <p>
-    Pro users can set a privacy period on a request to delay publication while
-    you work on your story or investigation.
+    Wij zijn zelf journalisten en begrijpen dat gescoopt worden de nachtmerrie
+    van elke journalist is. Journalisten en anderen met een Pro-account kunnen
+    daarom een periode instellen waarbinnen ze hun Wob-verzoek voor de andere
+    gebruikers van de site afschermen. Dit biedt hen de de gelegenheid om,
+    zonder pottenkijkers, in alle rust aan een publicatie te werken.
   </p>
 
   <p>
-    When a request is private we guarantee that it will only be visible on
-    <%= AlaveteliConfiguration.site_name %> for the period you select.
-    <%= AlaveteliConfiguration.pro_site_name %> administrators will also be able
-    to view your request, but will only do so in the event that they need to fix
-    a problem with it (e.g. failed delivery to the authority). They will not
-    reveal the contents of your request or any response you get to anyone else.
-    The authority may still publish it in a disclosure log as usual.
+    Als je kiest voor een afgeschermd verzoek heb je de garantie dat in de door
+    jou geselecteerde periode alleen jij het verzoek en alle bijbehorende
+    correspondentie kunt zien. Weliswaar kunnen ook de beheerders van de
+    Wob-Knop het verzoek bekijken, maar dat zullen ze alleen doen om een
+    technisch probleem te verhelpen. In geen geval zullen ze de inhoud van je
+    verzoek met derden delen.
   </p>
 
   <h3 id="how-long-can-i-keep-requests-private">
-    How long can I keep requests private?
+    Hoe lang kan ik mijn verzoek afschermen?
    <a href="#how-long-can-i-keep-requests-private">#</a>
   </h3>
 
   <p>
-    Privacy periods can be set for 3, 6 and 12 month periods.
+    Je kunt je verzoek afschermen voor periodes van 3, 6 of 12 maanden.
   </p>
 
   <p>
@@ -52,20 +65,23 @@
   </p>
 
   <p>
-    Once the privacy period ends, your request and following correspondence,
-    including <strong>your name</strong>, will be <strong>
-    <%= link_to 'displayed publicly',
-      help_privacy_path(anchor: 'public_request') %></strong> on this website.
+    Een week voor het verlopen van de gekozen periode ontvang je bericht. Op de
+    dag dat de periode daadwerkelijk eindigt ontvang je opnieuw bericht. Op dat
+    moment worden je verzoek en de bijbehorende correspondentie
+    <%= link_to 'automatisch zichtbaar',
+    help_privacy_path(anchor: 'public_request') %> op de site. Ook je naam wordt
+    dan zichtbaar.
   </p>
 
   <h3 id="i-need-more-time-can-i-extend-a-privacy-period">
-    I need more time. Can I extend a privacy period?
+    Ik heb meer tijd nodig. Kan ik verlengen?
    <a href="#i-need-more-time-can-i-extend-a-privacy-period">#</a>
   </h3>
 
   <p>
-    Privacy periods can be extended, but only in the week before the expiry
-    date.
+    Ja. Je kunt de periode waarin je verzoek wordt afgeschermd zo vaak
+    verlengen als je wilt, maar dit kan alleen in de week voorafgaand aan het
+    verlopen van de huidige periode.
   </p>
 
   <p>
@@ -73,18 +89,14 @@
                   alt: 'Extending a privacy period' %>
   </p>
 
-  <p>
-    There is no limit to the number of times a privacy period may be extended,
-    but each extension requires manual confirmation.
-  </p>
-
   <h3 id="how-do-i-publish-a-request">
-    How do I publish a request?
+    Hoe maak ik mijn verzoek zichtbaar op de site?
    <a href="#how-do-i-publish-a-request">#</a>
   </h3>
 
   <p>
-    Requests can be published at any time.
+    Je kunt er op ieder gewenst moment voor kiezen je verzoek als zichtbaar te
+    maken door op ‘Publiceer verzoek’ te klikken.
   </p>
 
   <p>
@@ -93,35 +105,35 @@
   </p>
 
   <h3 id="can-i-make-private-batch-requests">
-    Can I make private batch requests?
+    Kan ik bulkverzoeken ook afschermen?
    <a href="#can-i-make-private-batch-requests">#</a>
   </h3>
 
   <p>
-    Privacy periods can also be set on batch requests, and their operation
-    follows the same principles as individual requests. Changes to a privacy
-    period on one request belonging to a batch are mirrored to all requests in
-    the batch.
+    Ja, op dezelfde manier als bij enkelvoudige verzoeken. Maar je kunt alleen
+    het bulkverzoek als geheel afschermen, niet afzonderlijk per deelverzoek.
+    Hetzelfde geldt voor verlengingen.
   </p>
 
   <h2 id="batch">
-    Batch
+    Bulkverzoeken
    <a href="#batch">#</a>
   </h2>
 
   <p>
-    Batch makes it easy to send and manage requests to multiple authorities.
+    Met de optie Bulkverzoeken stuur je eenvoudig een reeks dezelfde verzoeken
+    naar meerdere overheidsinstanties.
   </p>
 
   <h3 id="how-do-i-make-a-batch-request">
-    How do I make a batch request?
+    Hoe doe ik een bulkverzoek?
    <a href="#how-do-i-make-a-batch-request">#</a>
   </h3>
 
   <p>
-    Batch allows you to select a list of authorities and write a template
-    request. The request gets sent individually to each authority like a mail
-    merge.
+    Als je voor een bulkverzoek kiest, selecteer stel je een lijst met
+    overheidsinstanties samen en formuleer je één standaardverzoek. Elke
+    overheidsinstantie ontvangt zelfstandig een verzoek per mail.
   </p>
 
   <p>
@@ -135,14 +147,16 @@
   </p>
 
   <h3 id="how-do-i-manage-a-batch-request">
-    How do I manage a batch request?
+    Hoe beheer ik mijn bulkverzoek?
    <a href="#how-do-i-manage-a-batch-request">#</a>
   </h3>
 
   <p>
-    Progress of a batch can be managed with a convenient progress meter to see
-    how close you are to getting responses from all authorities and making it
-    easy to choose which action to take next.
+    De voortgang van je bulkverzoek wordt bijgehouden in een handige
+    overzichtspagina. Hier kun je eenvoudig monitoren of en hoe de
+    overheidsinstanties gereageerd hebben. Je kunt van daaruit doorklikken naar
+    de deelverzoeken om te reageren op berichten van de overheidsinstanties en
+    andere vervolgacties te ondernemen.
   </p>
 
   <p>
@@ -151,13 +165,14 @@
   </p>
 
   <h3 id="how-do-i-manage-batch-privacy-periods">
-    How do I manage batch privacy periods?
+    Hoe scherm ik bulkverzoeken af?
    <a href="#how-do-i-manage-batch-privacy-periods">#</a>
   </h3>
 
   <p>
-    Batches can be made private, and privacy periods easily managed across the
-    batch.
+    Je kunt bulkverzoeken eenvoudig afschermen, op dezelfde wijze als
+    enkelvoudige verzoeken, maar je kunt alleen een periode kiezen voor het
+    gehele bulkverzoek, niet per deelverzoek.
   </p>
 
   <p>
@@ -166,30 +181,31 @@
   </p>
 
   <h3 id="how-many-authorities-can-i-add-to-a-batch">
-    How many authorities can I add to a batch?
+    Aan hoeveel overheidinstanties kan ik gelijktijdig een bulkverzoek doen?
    <a href="#how-many-authorities-can-i-add-to-a-batch">#</a>
   </h3>
 
   <p>
-    The maximum number of authorities that can be added to a batch is
+    Het maximum aantal overheidsinstanties per bulkverzoek is
     <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
   </p>
 
   <h3 id="how-many-batch-requests-can-i-make">
-    How many batch requests can I make?
+    Is er een grens aan het aantal bulkverzoeken dat ik kan doen?
    <a href="#how-many-batch-requests-can-i-make">#</a>
   </h3>
 
   <p>
-    We recommend sending a pilot batch to a sample of authorities to test the
-    request. Once you know the authorities hold the type of data that you’re
-    asking for you can then request from the remaining authorities.
+    Voor Pro-gebruikers is er geen absolute limiet aan het aantal
+    bulkverzoeken, maar zijn net als alle gebruikers wel verplicht om zich te
+    houden aan onze <%= link_to 'richtlijnen voor een verantwoord gebruik',
+      help_requesting_path(anchor: 'responsible') %> van de Wob-Knop.
   </p>
 
   <p>
-    There’s no limit to the number of batches that can be sent, but Pro users
-    are required to abide by our guidelines about writing
-    <%= link_to 'responsible requests',
-      help_requesting_path(anchor: 'responsible') %>.
+    Overigens is het aan te raden om bij elk bulkverzoek te beginnen met een
+    paar proefverzoeken, om te kijken of ze effectief zijn. Pas als je weet dat
+    deze verzoeken inderdaad de data opleveren waarnaar je op zoek bent, ga je
+    over tot het bulkverzoek.
   </p>
 </div>
