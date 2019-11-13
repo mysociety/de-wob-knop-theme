@@ -25,5 +25,8 @@ Rails.configuration.to_prepare do
     # Hoe Het Werkt
     def wob_knop_gebruiken
     end
+
+    def over_de_wob
+    end
   end
 end

@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   # Hoe Het Werkt
   get '/help/wob-knop-gebruiken' => 'help#wob_knop_gebruiken',
       as: :help_wob_knop_gebruiken
+
+  get '/help/over-de-wob' => 'help#over_de_wob',
+      as: :help_over_de_wob
 end
