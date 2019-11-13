@@ -34,5 +34,8 @@ Rails.configuration.to_prepare do
 
     def na_je_verzoek
     end
+
+    def bezwaar_en_beroep
+    end
   end
 end

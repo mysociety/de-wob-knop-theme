@@ -21,4 +21,7 @@ Rails.application.routes.draw do
 
   get 'help/na-je-verzoek' => 'help#na_je_verzoek',
       as: :help_na_je_verzoek
+
+  get 'help/bezwaar-en-beroep' => 'help#bezwaar_en_beroep',
+      as: :help_bezwaar_en_beroep
 end
