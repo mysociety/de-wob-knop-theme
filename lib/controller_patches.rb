@@ -21,5 +21,9 @@ Rails.configuration.to_prepare do
   HelpController.class_eval do
     def faqs
     end
+
+    # Hoe Het Werkt
+    def wob_knop_gebruiken
+    end
   end
 end

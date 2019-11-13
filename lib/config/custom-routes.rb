@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   # get '/help/help_out' => 'help#help_out'
 
   get '/help/veelgestelde-vragen' => 'help#faqs', as: :help_faqs
+
+  # Hoe Het Werkt
+  get '/help/wob-knop-gebruiken' => 'help#wob_knop_gebruiken',
+      as: :help_wob_knop_gebruiken
 end
