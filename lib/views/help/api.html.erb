@@ -1,14 +1,16 @@
-<% @title = "About our API" %>
+<% @title = 'API' %>
 
-<%= render :partial => 'sidebar' %>
+<%= render partial: 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
-  <h1><%=@title %></h1>
+  <h1><%= @title %></h1>
+
   <dl>
     <dt>Introduction</dt>
     <dd>
-      <p>This page explains how programmers can make other websites and software
-        interact with  <%= site_name %> via an "API".
+      <p>
+        Deze pagina legt uit hoe programmeurs andere websites en software met
+        onze website kunnen linken door het gebruik van onze API.
       </p>
 
       <p> <%= site_name %> does not have a full API yet, but we are gradually adding
