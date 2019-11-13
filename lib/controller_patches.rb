@@ -37,5 +37,8 @@ Rails.configuration.to_prepare do
 
     def bezwaar_en_beroep
     end
+
+    def database_doorzoeken
+    end
   end
 end

@@ -24,4 +24,8 @@ Rails.application.routes.draw do
 
   get 'help/bezwaar-en-beroep' => 'help#bezwaar_en_beroep',
       as: :help_bezwaar_en_beroep
+
+  get 'help/database-doorzoeken' => 'help#database_doorzoeken',
+      as: :help_database_doorzoeken
+
 end
