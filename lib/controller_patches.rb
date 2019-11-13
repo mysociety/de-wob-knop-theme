@@ -28,5 +28,8 @@ Rails.configuration.to_prepare do
 
     def over_de_wob
     end
+
+    def wob_verzoek_versturen
+    end
   end
 end

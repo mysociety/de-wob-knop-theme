@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 
   get '/help/over-de-wob' => 'help#over_de_wob',
       as: :help_over_de_wob
+
+  get 'help/wob-verzoek-versturen' => 'help#wob_verzoek_versturen',
+      as: :help_wob_verzoek_versturen
 end
