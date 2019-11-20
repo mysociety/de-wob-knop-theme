@@ -17,4 +17,31 @@ Rails.configuration.to_prepare do
   #   def help_out
   #   end
   # end
+
+  HelpController.class_eval do
+    def faqs
+    end
+
+    # Hoe Het Werkt
+    def wob_knop_gebruiken
+    end
+
+    def over_de_wob
+    end
+
+    def wob_verzoek_versturen
+    end
+
+    def na_je_verzoek
+    end
+
+    def bezwaar_en_beroep
+    end
+
+    def database_doorzoeken
+    end
+
+    def meer_info_voor_wob_ambtenaren
+    end
+  end
 end
