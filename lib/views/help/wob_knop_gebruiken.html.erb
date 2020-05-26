@@ -1,4 +1,4 @@
-<% @title = 'Wob-Knop gebruiken' %>
+<% @title = 'Stap voor stap' %>
 
 <%= render partial: 'sidebar' %>
 
@@ -6,28 +6,30 @@
   <h1><%= @title %></h1>
 
   <h2>
-    Stap 0. Voordat je begint
+    Voordat je begint
   </h2>
 
   <ul>
     <li>
-      Welke informatie Denk goed na over welke informatie je zoekt. Als je
-      precies weet welke documenten je zoekt, vraag dan in ieder geval naar die
-      specifieke documenten. Weet je dat niet, probeer het onderwerp waarover
-      je documenten zoekt zo helder mogelijk voor jezelf te omschrijven.
+      <strong>Welke informatie</strong> Denk goed na over welke informatie je
+      zoekt. Als je precies weet welke documenten je zoekt, vraag dan in ieder
+      geval naar die specifieke documenten. Weet je dat niet, probeer het
+      onderwerp waarover je documenten zoekt zo helder mogelijk voor jezelf te
+      omschrijven.
     </li>
 
     <li>
-      Welke overheid Vraag je af bij welke overheidsinstantie de informatie te
-      vinden is. Onder de knop ‘Zoek overheidsinstantie’ kun je de
-      overheidsinstanties vinden die relevant zouden kunnen zijn voor jouw
-      Wob-verzoek.
+      <strong>Welke overheid</strong> Vraag je af bij welke overheidsinstantie
+      de informatie te vinden is. Onder de knop ‘Zoek overheidsinstantie’ kun
+      je de overheidsinstanties vinden die relevant zouden kunnen zijn voor
+      jouw Wob-verzoek.
     </li>
 
     <li>
-      Al openbaar? Check of de informatie al openbaar gemaakt is. Overheden
-      publiceren namelijk ook allerlei informatie uit eigen beweging op hun
-      website. Doorzoek bijvoorbeeld eerder ‘gewobte’ overheidsdocumenten op <a
+      <strong>Al openbaar?</strong> Check of de informatie al openbaar gemaakt
+      is. Overheden publiceren namelijk ook allerlei informatie uit eigen
+      beweging op hun website. Doorzoek bijvoorbeeld eerder ‘gewobte’
+      overheidsdocumenten op <a
         href="https://www.rijksoverheid.nl/documenten">rijksoverheid.nl</a>
       maar ook andere overheidswebsites bevatten soms een overzicht van
       openbaar gemaakte documenten, zoals de <a
@@ -38,50 +40,58 @@
     </li>
 
     <li>
-      Al eerder gewobt? Doorzoek de database met eerdere Wob-verzoeken die via
-      de Wob-Knop zijn gedaan om te kijken of iemand anders de documenten die
-      je zoekt al ontvangen heeft.
+      <strong>Al op de Wob-Knop?</strong> Doorzoek de database met eerdere
+      Wob-verzoeken die via de Wob-Knop zijn gedaan om te kijken of iemand
+      anders de documenten die je zoekt al ontvangen heeft.
     </li>
   </ul>
 
-  <h2>
+  <h2 id="step-1">
     Stap 1. Naar de Wob-Knop
   </h2>
 
   <p>
-    Klik op het tabje ‘Naar de Wob-Knop’.
+    Klik in de menu-balk op ‘Doe een verzoek’.
   </p>
 
-  <h2>
+  <h2 id="step-2">
     Stap 2. Kies een overheid
   </h2>
 
   <p>
-    Typ de naam van de overheidsinstantie in het lege vakje. Als je niet precies weet hoe de overheidsinstantie heet, of bij welke overheid de informatie te vinden is, kun je ook andere zoektermen gebruiken. Je krijgt nu een lijst met een of meer zoekresultaten te zien. Je zult zien dat er veel meer organisaties onder de overheid vallen dan je dacht! Kies een overheidsinstantie uit de lijst en klik ernaast op de knop ‘Doe een verzoek’.
+    Typ de naam van de overheidsinstantie in het lege vakje. Als je niet
+    precies weet hoe de overheidsinstantie heet, of bij welke overheid de
+    informatie te vinden is, kun je ook andere zoektermen gebruiken. Je krijgt
+    nu een lijst met een of meer zoekresultaten te zien. Je zult zien dat er
+    veel meer organisaties onder de werking van de Wob vallen dan je dacht!
+    Kies een overheidsinstantie uit de lijst en klik ernaast op de knop ‘Doe
+    een verzoek’.
   </p>
 
   <p>
     Je krijgt nu het verzoekformulier te zien.
   </p>
 
-  <h2>
-    Stap 3. Kies je onderwerp
+  <h2 id="step-3">
+    Stap 3. Omschrijf je onderwerp
   </h2>
 
   <p>
     Vul in het bovenste vakje een korte omschrijving van je Wob-verzoek in,
     niet meer dan één regel. Dit is het onderwerp van je verzoek. Bedenk dat je
     alleen informatie kunt vragen die iets te maken heeft met de taken van de
-    overheid.
+    overheid, niet over privé-aangelegenheden van ambtenaren.
+
   </p>
 
   <p>
-    De site zal mogelijk suggesties doen van bestaande Wob-verzoeken met
+    De site zal mogelijk suggesties doen van
+    <%= link_to 'bestaande Wob-verzoeken', request_list_all_path(anchor: 'results') %>
     dezelfde titel. Hieruit kun je inspiratie opdoen voor je eigen omschrijving
-    of zelfs, toch nog, de informatie vinden die je zoekt.
+    of zelfs, toch nog, de informatie vinden die je zoch.
   </p>
 
-  <h2>
+  <h2 id="step-4">
     Stap 4. Bedenk het volgende
   </h2>
 
@@ -122,13 +132,13 @@
     Bedenk of deze waarschuwingen op jouw verzoek van toepassing zijn.
   </p>
 
-  <h2>
+  <h2 id="step-5">
     Stap 5. Schrijf het verzoek
   </h2>
 
   <p>
     In het grote vak schrijf je je verzoek. Er staan al een aantal tekstblokjes
-    die in elk Wob-verzoek moeten staan. In de ruimte ertussen schrijf je op
+    die in elk Wob-verzoek nuttig zijn. In de ruimte ertussen schrijf je op
     welke informatie of specifieke documenten je zoekt.
   </p>
 
@@ -178,11 +188,11 @@
   </li>
 
   <p>
-    Zie de veelgestelde vragen voor een verdere toelichting op enkele van deze
-    adviezen.
+    Zie de <%= link_to 'veelgestelde vragen', help_faqs_path %> voor een verdere
+    toelichting op enkele van deze adviezen.
   </p>
 
-  <h2>
+  <h2 id="step-6">
     Stap 6. Onderteken de brief
   </h2>
 
@@ -190,7 +200,7 @@
     Schrijf je voornaam (of je voorletters) en je achternaam onderaan de brief.
   </p>
 
-  <h2>
+  <h2 id="step-7">
     Stap 7. Controleer je verzoek
   </h2>
 
@@ -199,7 +209,7 @@
     ‘Wijzig je verzoek’.
   </p>
 
-  <h2>
+  <h2 id="step-8">
     Stap 8. Verzend je verzoek
   </h2>
 
@@ -209,16 +219,17 @@
   </p>
 
   <p>
-    Gebruik je de Wob-Knop voor het eerst? Meld je dan aan als gebruiker. Vul
-    in ieder geval je naam, voornaam, e-mailadres en wachtwoord in. Er zal dan
-    een bevestigingsmail naar je e-mailadres worden gestuurd. Klik op de
+    Gebruik je de Wob-Knop voor het eerst?
+    <%= link_to 'Meld je dan', signin_path %> aan als gebruiker. Vul in ieder
+    geval je naam, voornaam, e-mailadres en wachtwoord in. Er zal dan een
+    bevestigingsmail naar je e-mailadres worden gestuurd. Klik op de
     bevestigingslink in het e-mailbericht. Als de bevestigingsmail niet in je
     inbox verschijnt, check dan ook even je spamfolder.
   </p>
 
   <p>
     Zie voor andere zaken waar je tegenaan kunt lopen in deze fase de
-    Veelgestelde Vragen-pagina.
+    <%= link_to 'Veelgestelde Vragen-pagina', help_faqs_path %>
   </p>
 
   <div id="hash_link_padding"></div>
