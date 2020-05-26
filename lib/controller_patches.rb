@@ -25,22 +25,10 @@ Rails.configuration.to_prepare do
     def step_by_step
     end
 
-    def over_de_wob
-    end
-
-    def wob_verzoek_versturen
-    end
-
     def after_your_request
     end
 
     def objections_and_appeals
-    end
-
-    def database_doorzoeken
-    end
-
-    def meer_info_voor_wob_ambtenaren
     end
 
     def legal_framework
