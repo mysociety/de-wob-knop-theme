@@ -42,5 +42,8 @@ Rails.configuration.to_prepare do
 
     def meer_info_voor_wob_ambtenaren
     end
+
+    def legal_framework
+    end
   end
 end

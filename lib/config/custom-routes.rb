@@ -29,4 +29,7 @@ Rails.application.routes.draw do
 
   get 'help/meer-info-voor-wob-ambtenaren' => 'help#meer_info_voor_wob_ambtenaren',
       as: :help_meer_info_voor_wob_ambtenaren
+
+  get 'help/wettelijk-kader' => 'help#legal_framework',
+      as: :help_legal_framework
 end
