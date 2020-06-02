@@ -7,26 +7,24 @@
 
   <p>
     Hier kan je lezen over het gebruik van je gegevens. Als je vragen hebt,
-    neem gerust contact met ons op.
+    neem gerust <%= link_to 'contact', help_contact_path %> met ons op.
   </p>
 
   <dl>
-    <dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
+    <dt id="email_address">Wie krijgt mijn e-mailadres te zien? <a href="#email_address">#</a> </dt>
     <dd>
-
       <p>
-        Wij zullen nooit je e-mailadres publiek maken, tenzij we daartoe
-        wettelijk verplicht worden of als jij het ons vraagt. Dus ook niet aan
-        de overheidsinstantie waaraan je je Wob-verzoek richt. Indien je een
-        Wob-verzoek indient ontvangt de overheidsinstantie dit vanaf een @
-        <%= AlaveteliConfiguration::incoming_email_domain %> e-mailadres,
-        specifiek voor dit verzoek.
+        Wij zullen alleen je e-mailadres gebruiken als we daartoe wettelijk
+        verplicht zijn of als jij het ons vraagt. Je e-mailadres is dus ook
+        niet te zien voor de overheidsinstantie waaraan je je Wob-verzoek
+        richt. Je Wob-verzoek wordt verstuurd vanaf een specifiek voor het
+        individuele verzoek aangemaakt
+        @<%= AlaveteliConfiguration::incoming_email_domain %> e-mailadres.
       </p>
-
       <p>
-        Als je een bericht stuurt naar een andere gebruiker van de site, zal je
-        persoonlijke e-mailadres wel zichtbaar zijn. Je wordt daarvan op de
-        hoogte gebracht.
+        Als je een bericht stuurt naar een andere gebruiker van de Wob-Knop zal
+        je eigen, persoonlijke e-mailadres wél zichtbaar zijn. Dit om misbruik
+        te voorkomen. Je wordt daar vóór het versturen aan herinnerd.
       </p>
     </dd>
 
@@ -42,40 +40,36 @@
       </p>
     </dd>
 
-    <dt id="public_request">Waarom verschijnt mijn naam en verzoek om informatie openbaar op de website? <a href="#public_request">#</a> </dt>
+    <dt id="public_request">Waarom verschijnen mijn naam en Wob-verzoek op de website? <a href="#public_request">#</a> </dt>
     <dd>
       <p>
-        Wij publiceren je Wob-verzoek zodat iedereen toegang heeft tot het door
-        jou verzonden Wob-verzoek en ingewonnen informatie en deze ook kan
-        gebruiken. In principe verwijderen we geen verzoeken. Zie voor meer
-        informatie: ‘Wilt u mijn persoonlijke gegevens verwijderen?’
+        Door je echte naam te gebruiken ben je gemakkelijker terug te vinden
+        door mensen die je willen helpen bij je verzoek, onderzoek of campagne.
+        Bovendien helpt het gebruik van je eigen naam misbruik van de Wob-Knop
+        voorkomen.
       </p>
-
       <p>
-        Door je echte naam te gebruiken ben je ook gemakkelijker terug te
-        vinden door mensen die je willen helpen bij je onderzoek of mee willen
-        campagne voeren.
-      </p>
-
-      <p>
-        Voor alternatieven, dus als niet wil dat je volledige naam gepubliceerd
-        wordt, zie de volgende vraag.
+        We publiceren je Wob-verzoek zodat iedereen toegang heeft tot het door
+        jou verzonden Wob-verzoek en de ingewonnen informatie en documenten en
+        deze ook kan gebruiken. In principe verwijderen we geen informatie. Zie
+        ook: ‘<a href="#takedown">Kunnen jullie mijn persoonlijke gegevens 
+          verwijderen?</a>’
       </p>
     </dd>
 
     <dt id="real_name">Kan ik een Wob-verzoek onder een pseudoniem indienen? <a href="#real_name">#</a> </dt>
     <dd>
       <p>
-        Je moet je eigen naam gebruiken als je een Wob-verzoek doet.
+        Nee, je moet je eigen naam gebruiken als je een Wob-verzoek doet.
       </p>
     </dd>
 
     <dt id="full_address">Ze hebben mijn postadres gevraagd! <a href="#full_address">#</a> </dt>
     <dd>
       <p>
-        Als een overheidsinstantie over papieren stukken beschikt, kunnen ze je
-        postadres vragen. Antwoord dan dat je toch echt per e-mail een antwoord
-        wenst te ontvangen.
+        Als een overheidsinstantie over papieren stukken beschikt, zullen ze
+        mogelijk om je postadres vragen. Antwoord dan dat je toch echt per
+        e-mail digitale kopieën wenst te ontvangen.
       </p>
     </dd>
 
@@ -89,10 +83,10 @@
     <dt id="delete_requests">Kunnen jullie mijn verzoeken verwijderen, of mijn naam aanpassen? <a href="#delete_requests">#</a> </dt>
     <dd>
       <p>
-        De Wob-Knop is een permanent en publiek archief van verzoeken om
-        openbaarheid van bestuur. Een vraag die voor jou niet meer relevant
-        lijkt, kan nog steeds nuttig zijn voor anderen. Daarom verwijderen we
-        geen verzoeken.
+        De Wob-Knop is een permanente en publieke database met Wob-verzoeken.
+        Een vraag die voor jou niet meer relevant lijkt, kan nog steeds nuttig
+        zijn voor anderen. Ook om in te schatten of een verzoek al eerder
+        ingediend en beantwoord is. Daarom verwijderen we geen verzoeken.
       </p>
 
       <p>
@@ -102,7 +96,8 @@
       </p>
 
       <p>
-        Zie ook: ‘<a href="#real_name">Kan ik een vraag om openbaarheid indienen onder een pseudoniem?</a>’.
+        Zie ook: ‘<a href="#real_name">Kan ik een vraag om openbaarheid
+        indienen onder een pseudoniem?</a>’.
       </p>
     </dd>
 
@@ -122,14 +117,16 @@
 
       <p>
         Wij zijn van mening dat het behoud van namen van ambtenaren en andere
-        personeelsleden van de overheid van openbaar belang kan zijn. We
-        verwijderen alleen namen van ambtenaren en andere personeelsleden van
-        de overheid in uitzonderlijke gevallen, zoals wanneer de publicatie van
-        een naam en functie een reële bedreiging vormt voor de veiligheid van
-        een individu. Als je je in deze situatie bevindt, en je wenst je naam
-        verwijderd te zien, dien dan een verzoek hiertoe in. Dit verzoek moet
-        aantonen dat er een groter risico is dan het openbaar belang en dat de
-        organisatie de naam (en functie) ook van de eigen website verwijderd
+        personeelsleden van de overheid van openbaar belang kan zijn. We gaan
+        ervanuit dat de overheid bij de beslissing tot openbaarmaking deze
+        afweging al heeft gemaakt. We verwijderen alleen namen van ambtenaren
+        en andere personeelsleden van de overheid in uitzonderlijke gevallen,
+        zoals wanneer de publicatie van een naam en functie een reële
+        bedreiging vormt voor de veiligheid van een individu. Als je je in deze
+        situatie bevindt, en je wenst je naam verwijderd te zien, dien dan een
+        verzoek hiertoe in. Dit verzoek moet aantonen dat de bedreiging groter
+        is dan het belang van openbaarheid en dat de organisatie dus ook de
+        naam (en functie) uit de documenten op haar eigen website verwijderd
         heeft.
       </p>
     </dd>

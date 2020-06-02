@@ -9,25 +9,15 @@ Rails.application.routes.draw do
 
   get '/help/veelgestelde-vragen' => 'help#faqs', as: :help_faqs
 
-  # Hoe Het Werkt
-  get '/help/wob-knop-gebruiken' => 'help#wob_knop_gebruiken',
-      as: :help_wob_knop_gebruiken
+  get '/help/stap-voor-stap' => 'help#step_by_step',
+      as: :help_step_by_step
 
-  get '/help/over-de-wob' => 'help#over_de_wob',
-      as: :help_over_de_wob
+  get 'help/na-je-verzoek' => 'help#after_your_request',
+      as: :help_after_your_request
 
-  get 'help/wob-verzoek-versturen' => 'help#wob_verzoek_versturen',
-      as: :help_wob_verzoek_versturen
+  get 'help/bezwaar-en-beroep' => 'help#objections_and_appeals',
+      as: :help_objections_and_appeals
 
-  get 'help/na-je-verzoek' => 'help#na_je_verzoek',
-      as: :help_na_je_verzoek
-
-  get 'help/bezwaar-en-beroep' => 'help#bezwaar_en_beroep',
-      as: :help_bezwaar_en_beroep
-
-  get 'help/database-doorzoeken' => 'help#database_doorzoeken',
-      as: :help_database_doorzoeken
-
-  get 'help/meer-info-voor-wob-ambtenaren' => 'help#meer_info_voor_wob_ambtenaren',
-      as: :help_meer_info_voor_wob_ambtenaren
+  get 'help/wettelijk-kader' => 'help#legal_framework',
+      as: :help_legal_framework
 end

@@ -22,26 +22,16 @@ Rails.configuration.to_prepare do
     def faqs
     end
 
-    # Hoe Het Werkt
-    def wob_knop_gebruiken
+    def step_by_step
     end
 
-    def over_de_wob
+    def after_your_request
     end
 
-    def wob_verzoek_versturen
+    def objections_and_appeals
     end
 
-    def na_je_verzoek
-    end
-
-    def bezwaar_en_beroep
-    end
-
-    def database_doorzoeken
-    end
-
-    def meer_info_voor_wob_ambtenaren
+    def legal_framework
     end
   end
 end
