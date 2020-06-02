@@ -9,9 +9,8 @@ Rails.application.routes.draw do
 
   get '/help/veelgestelde-vragen' => 'help#faqs', as: :help_faqs
 
-  # Hoe Het Werkt
-  get '/help/wob-knop-gebruiken' => 'help#wob_knop_gebruiken',
-      as: :help_wob_knop_gebruiken
+  get '/help/stap-voor-stap' => 'help#step_by_step',
+      as: :help_step_by_step
 
   get '/help/over-de-wob' => 'help#over_de_wob',
       as: :help_over_de_wob

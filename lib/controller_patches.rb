@@ -22,8 +22,7 @@ Rails.configuration.to_prepare do
     def faqs
     end
 
-    # Hoe Het Werkt
-    def wob_knop_gebruiken
+    def step_by_step
     end
 
     def over_de_wob
