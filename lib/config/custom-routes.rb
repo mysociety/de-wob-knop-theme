@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   get 'help/na-je-verzoek' => 'help#after_your_request',
       as: :help_after_your_request
 
-  get 'help/bezwaar-en-beroep' => 'help#bezwaar_en_beroep',
-      as: :help_bezwaar_en_beroep
+  get 'help/bezwaar-en-beroep' => 'help#objections_and_appeals',
+      as: :help_objections_and_appeals
 
   get 'help/database-doorzoeken' => 'help#database_doorzoeken',
       as: :help_database_doorzoeken

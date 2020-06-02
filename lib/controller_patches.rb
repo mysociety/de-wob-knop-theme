@@ -34,7 +34,7 @@ Rails.configuration.to_prepare do
     def after_your_request
     end
 
-    def bezwaar_en_beroep
+    def objections_and_appeals
     end
 
     def database_doorzoeken
