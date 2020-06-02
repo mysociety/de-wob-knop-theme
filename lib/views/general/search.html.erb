@@ -11,15 +11,94 @@
 <% end%>
 
 <div id="header_left" class="header_left">
-  <% if @query.nil? %>
+  <% if @advanced %>
+    <h1>Database doorzoeken</h1>
+
+  <% elsif @query.nil? %>
     <h1><%= _("Search") %></h1>
+
   <% else %>
     <h1><%= _("Search results") %></h1>
+
   <% end%>
 
   <% if @advanced %>
     <div id="advanced-search" class="advanced-search">
-      <p><%= _('To use the advanced search, combine phrases and labels as described in the search tips below.') %></p>
+      <h2>
+        Hoe kan ik eenvoudig de database met eerdere Wob-verzoeken doorzoeken?
+      </h2>
+      <p>
+        Via de Wob-Knop kun je eenvoudig met zoektermen zoeken naar eerdere
+        Wob-verzoeken die met de Wob-Knop zijn gedaan. Ook kom je op die manier
+        terecht bij de documenten die deze verzoeken hebben opgeleverd en de
+        correspondentie die over de verzoeken is gevoerd.
+      </p>
+      <p>
+        Je kunt je zoekopdracht inkaderen met zoektermen, de periode waarin je
+        wilt zoeken, ofen met het resultaat dat de verzoeken hebben opgeleverd
+        (‘succesvol’, ‘niet succesvol’, ‘niet beantwoord’).
+      </p>
+      <p>
+        Zie hieronder tips over geavanceerd zoeken voor hele specifieke
+        zoekopdrachten.
+      </p>
+
+      <h2>
+        Wat wordt er precies opgeslagen in de database van de Wob-Knop?
+      </h2>
+
+      <ol>
+        <li>
+          Alle Wob-verzoeken die via de Wob-Knop zijn ingediend.
+        </li>
+        <li>
+          Alle correspondentie over een Wob-verzoek die via de Wob-Knop is
+          gevoerd.
+        </li>
+        <li>
+          Alle documenten die overheidsinstanties via de Wob-Knop hebben
+          verstrekt.
+        </li>
+      </ol>
+
+      <p>
+        Je vindt dus geen Wob-verzoeken die niet via de Wob-Knop zijn gedaan of
+        gewobte documenten die niet via de Wob-Knop zijn verstrekt.
+      </p>
+      <h2>
+        Waarom zou ik de database van de Wob-Knop doorzoeken?
+      </h2>
+      <p>
+        De database is om allerlei redenen een belangrijke toevoeging aan het
+        ‘arsenaal’ van de wobber.
+      </p>
+
+      <ol>
+        <li>
+          Het is sowieso de moeite waard om te checken of de documenten waar je
+          naar op zoek bent al door iemand anders via de Wob-Knop gewobt zijn.
+        </li>
+        <li>
+          Je kunt zien hoe anderen hun (soortgelijke) verzoek hebben
+          geformuleerd en hoe anderen communiceren met Wob-ambtenaren.
+        </li>
+        <li>
+          Je kunt ook zien hoe de overheidsinstantie die je wil wobben
+          doorgaans omgaat met Wob-verzoeken. Bijvoorbeeld: wat kun je
+          verwachten wat betreft de tijd die de instantie gaat nemen om je
+          verzoek te beantwoorden?
+        </li>
+        <li>
+          En ook zie je wat voor soort documenten de overheidsinstantie die je
+          wil wobben ‘in huis’ heeft. Jij kunt dan ook naar dat type document
+          vragen.
+        </li>
+        <li>
+          Je kunt aan de hand van eerdere Wob-verzoeken inspiratie opdoen voor
+          een eigen Wob-verzoek.
+        </li>
+      </ol>
+
       <%= form_tag(advanced_search_url, :method => "get") do %>
         <p>
           <%= text_field_tag :query, @query, { :size => 60 } %>
@@ -54,7 +133,10 @@
 
       <div id="common-subfilters" class="list-filter-item">
         <div id="variety-filter" class="filter-request-types">
-          <h3 class="title"><%= _("Showing") %></h3>
+          <h3 class="title">
+            <%= _("Showing") %>
+          </h3>
+
           <ul>
           <% labels = [
             ["requests", _("requests")],
@@ -79,7 +161,10 @@
       <% if @variety_postfix == "requests" %>
         <div id="requests-subfilters" class="requests-subfilters">
           <div>
-            <h3 class="title"><%= _("Restrict to") %></h3>
+            <h3 class="title">
+              <%= _("Restrict to") %>
+            </h3>
+
             <% [["successful", _("successful requests")],
                 ["unsuccessful", _("unsuccessful requests")],
                 ["awaiting", _("unresolved requests")],
@@ -92,7 +177,10 @@
           </div>
 
           <div>
-            <h3 class="title"><%= _("Search in") %></h3>
+            <h3 class="title">
+              <%= _("Search in") %>
+            </h3>
+
             <% filters = if feature_enabled?(:annotations)
                  [["sent", _("messages from users")],
                   ["response", _("messages from authorities")],
@@ -139,7 +227,10 @@
 </div>  <!-- header left -->
 <% if !@track_thing.nil? %>
   <div id="header_right" class="header_right">
-    <h2><%= _('Track this search')%></h2>
+    <h2>
+      <%= _('Track this search')%>
+    </h2>
+
     <%= render :partial => 'track/tracking_links', :locals => { :track_thing => @track_thing, :own_request => false, :location => 'main' } %>
     <%= render :partial => 'track/rss_feed', :locals => { :track_thing => @track_thing, :location => 'main' } %>
   </div>
@@ -148,9 +239,15 @@
 <div style="clear:both;"></div>
 <% if @total_hits == 0 %>
   <div class="results_section">
-    <h2><%=@title %></h2>
+    <h2>
+      <%=@title %>
+    </h2>
+
     <% if @spelling_correction %>
-      <p id="did_you_mean"><%= _('Did you mean: {{correction}}', :correction => search_link(@spelling_correction)) %></p>
+      <p id="did_you_mean">
+        <%= _('Did you mean: {{correction}}', :correction => search_link(@spelling_correction)) %>
+      </p>
+
     <% end %>
   </div>
 <% end %>
@@ -160,9 +257,15 @@
   <% if @xapian_bodies_hits > 0 %>
     <div class="results_section">
       <% if @xapian_bodies_hits == 1 && @page == 1 %>
-        <h2 class="publicbody_results"><%= _('One public authority found') %></h2>
+        <h2 class="publicbody_results">
+          <%= _('One public authority found') %>
+        </h2>
+
       <% else %>
-        <h2 class="publicbody_results"><%= _('Public authorities {{start_count}} to {{end_count}} of {{total_count}}', :start_count => ((@page-1)*@bodies_per_page+1).to_s, :end_count => [@page*@bodies_per_page, @xapian_bodies.matches_estimated].min.to_s, :total_count => @xapian_bodies.matches_estimated.to_s) %></h2>
+        <h2 class="publicbody_results">
+          <%= _('Public authorities {{start_count}} to {{end_count}} of {{total_count}}', :start_count => ((@page-1)*@bodies_per_page+1).to_s, :end_count => [@page*@bodies_per_page, @xapian_bodies.matches_estimated].min.to_s, :total_count => @xapian_bodies.matches_estimated.to_s) %>
+        </h2>
+
       <% end %>
 
       <div class="results_block">
@@ -176,15 +279,24 @@
       <%= will_paginate WillPaginate::Collection.new(@page, @bodies_per_page, @max_bodies) %>
     </div>
   <% elsif @variety_postfix == 'bodies' %>
-    <p><%= raw(_('<a href="{{browse_url}}">Browse all</a> or <a href="{{add_url}}">ask us to add one</a>.', :browse_url => list_public_bodies_default_path.html_safe, :add_url => help_requesting_path(:anchor => 'missing_body').html_safe)) %></p>
+    <p>
+      <%= raw(_('<a href="{{browse_url}}">Browse all</a> or <a href="{{add_url}}">ask us to add one</a>.', :browse_url => list_public_bodies_default_path.html_safe, :add_url => help_requesting_path(:anchor => 'missing_body').html_safe)) %>
+    </p>
+
   <% end %>
 
   <% if @xapian_users_hits > 0 %>
     <div class="results_section">
       <% if @xapian_users_hits == 1 && @page == 1 %>
-        <h2 class="person_results"><%= _("One person found") %></h2>
+        <h2 class="person_results">
+          <%= _("One person found") %>
+        </h2>
+
       <% else %>
-        <h2 class="person_results"><%= _("People {{start_count}} to {{end_count}} of {{total_count}}", :start_count => ((@page-1)*@users_per_page+1).to_s, :end_count =>  [@page*@users_per_page, @xapian_users.matches_estimated].min.to_s, :total_count =>  @xapian_users.matches_estimated.to_s) %></h2>
+        <h2 class="person_results">
+          <%= _("People {{start_count}} to {{end_count}} of {{total_count}}", :start_count => ((@page-1)*@users_per_page+1).to_s, :end_count =>  [@page*@users_per_page, @xapian_users.matches_estimated].min.to_s, :total_count =>  @xapian_users.matches_estimated.to_s) %>
+        </h2>
+
       <% end %>
 
       <div class="results_block">
@@ -201,9 +313,15 @@
   <% if @xapian_requests_hits > 0 %>
     <div class="results_section">
       <% if @xapian_requests_hits == 1 && @page == 1 %>
-        <h2 class="foi_results"><%= _("One FOI request found") %></h2>
+        <h2 class="foi_results">
+          <%= _("One FOI request found") %>
+        </h2>
+
       <% else %>
-        <h2 class="foi_results"><%= _("FOI requests {{start_count}} to {{end_count}} of about {{total_count}}", :start_count => ((@page-1)*@requests_per_page+1).to_s, :end_count => [@page*@requests_per_page, @xapian_requests.matches_estimated].min.to_s, :total_count =>  @xapian_requests.matches_estimated.to_s) %></h2>
+        <h2 class="foi_results">
+          <%= _("FOI requests {{start_count}} to {{end_count}} of about {{total_count}}", :start_count => ((@page-1)*@requests_per_page+1).to_s, :end_count => [@page*@requests_per_page, @xapian_requests.matches_estimated].min.to_s, :total_count =>  @xapian_requests.matches_estimated.to_s) %>
+        </h2>
+
       <% end %>
 
       <div class="results_block">
