@@ -18,8 +18,8 @@ Rails.application.routes.draw do
   get 'help/wob-verzoek-versturen' => 'help#wob_verzoek_versturen',
       as: :help_wob_verzoek_versturen
 
-  get 'help/na-je-verzoek' => 'help#na_je_verzoek',
-      as: :help_na_je_verzoek
+  get 'help/na-je-verzoek' => 'help#after_your_request',
+      as: :help_after_your_request
 
   get 'help/bezwaar-en-beroep' => 'help#bezwaar_en_beroep',
       as: :help_bezwaar_en_beroep
