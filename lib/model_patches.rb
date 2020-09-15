@@ -22,7 +22,7 @@ Rails.configuration.to_prepare do
 
   IncomingMessage.class_eval do
     def specific_from_name?
-      false
+      !from_public_body?
     end
   end
 end
