@@ -19,4 +19,10 @@ Rails.configuration.to_prepare do
   #     "If you uncomment this line, this text will appear as default text in every message"
   #   end
   # end
+
+  IncomingMessage.class_eval do
+    def specific_from_name?
+      false
+    end
+  end
 end
