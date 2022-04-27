@@ -1,19 +1,19 @@
-<% @title = 'About' %>
+<% @title = "Over #{site_name}?" %>
 
 <%= render partial: 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
   <h1 id="introduction">
-    Over <%= site_name %>? <a href="#introduction">#</a>
+    <%= @title %> <a href="#introduction">#</a>
   </h1>
 
   <p>
     Op grond van <a href="https://wetten.overheid.nl/BWBR0005252/2018-07-28">de
-    Wet openbaarheid van bestuur</a> (Woo) heeft iedereen het recht om een
+    Wet open overheid</a> (Woo) heeft iedereen het recht om een
     informatieverzoek in te dienen bij alle Nederlandse instanties met een
     overheidstaak. Zo’n verzoek noemen we een Woo-verzoek.
   </p>
- 
+
   <p>
     De Woo-Knop is een website om snel en gemakkelijk digitale Woo-verzoeken in
     te dienen, de behandeling van het verzoek te volgen en de gevraagde
@@ -22,7 +22,7 @@
 
   <p>
     Je kunt de website ook gebruiken om alle eerdere via de Woo-Knop verstuurde
-    Woo-verzoeken en de verkregen overheidsdocumenten te doorzoeken.
+    Wob- en Woo-verzoeken en de verkregen overheidsdocumenten te doorzoeken.
   </p>
 
 
@@ -33,26 +33,37 @@
   <p>
     Iedereen heeft het recht om zonder opgaaf van redenen overheidsinformatie
     op te vragen. Burgers, journalisten, ngo’s, wetenschappers, advocaten en
-    bedrijven kunnen allemaal ‘wobben’ … en daarvoor de Woo-Knop gebruiken!
+    bedrijven kunnen allemaal een Woo-verzoek indienen… en daarvoor de Woo-Knop
+    gebruiken!
   </p>
 
   <p>
     <% if feature_enabled? :alaveteli_pro %>
-      Ben je journalist, dan biedt de Woo-Knop je
-      <%= link_to 'twee speciale functies', help_pro_path %>:
-      afgeschermde verzoeken en bulkverzoeken.
+      Voor journalisten biedt de Woo-Knop de Pro-versie met
+      <%= link_to 'twee extra functies', help_pro_path %>:
+      afgeschermde verzoeken en bulkverzoeken. Journalisten kunnen zich bij de
+      beheerders melden om een
+      <%= link_to 'Pro-account', help_pro_path(anchor: 'private-requests') %>
+      te krijgen. Op dit moment zijn aan zo’n account geen kosten verbonden.
     <% end %>
+  </p>
+
+  <p>
     Kijk ook even naar
-    <%= link_to 'speciale overwegingen', help_faqs_path(anchor: 'voor-journalisten') %>
+    <%= link_to 'speciale overwegingen',
+      help_faqs_path(anchor: 'voor-journalisten') %>
     waar je rekening mee moet houden op de
     <%= link_to 'Veelgestelde Vragen-pagina', help_faqs_path %> of bezoek de
     <a href="https://wob.vvoj.org/">website over de Woo</a> van de
     Vlaams-Nederlandse Vereniging van Onderzoeksjournalisten (VVOJ) voor
-    journalist ieke expertise over de Woo.
+    journalistieke expertise over de Woo.
   </p>
-  
+
   <dl>
-    <dt id="purpose">Waarom deze Woo-Knop? <a href="#purpose">#</a></dt>
+    <dt id="purpose">
+      Waarom deze Woo-Knop?
+      <a href="#purpose">#</a>
+    </dt>
     <dd>
       <p>
         De Woo-Knop maakt het veel eenvoudiger om een Woo-verzoek te versturen.
@@ -80,7 +91,7 @@
       </p>
 
       <p>
-        In het Verenigd Koninkrijk zijn al bijna 600 duizend verzoeken via de
+        In het Verenigd Koninkrijk zijn al meer dan 800 duizend verzoeken via de
         <a href="https://www.whatdotheyknow.com">Britse Woo-Knop
         (WhatDoTheyKnow.com)</a> gedaan en bezoeken jaarlijks 6 miljoen mensen
         de site. Het werkt echt!
@@ -88,30 +99,32 @@
 
     </dd>
 
-    <dt id="whybother_them">Waarom zou een overheidsinstantie antwoorden? <a href="#whybother_them">#</a></dt>
+    <dt id="whybother_them">
+      Waarom zou een overheidsinstantie antwoorden?
+      <a href="#whybother_them">#</a>
+    </dt>
     <dd>
       <p>
-        Volgens de Wet openbaarheid van bestuur hebben overheden de
-        verplichting om je vragen te beantwoorden. Het antwoord zal ofwel de
-        documenten bevatten die je nodig hebt, ofwel de redenen uiteenzetten
-        waarom de overheid de gevraagde informatie niet publiek wil of kan
-        maken.
+        Volgens de Wet open overheid hebben overheden de verplichting om je
+        vragen te beantwoorden. Het antwoord zal ofwel de documenten bevatten
+        die je nodig hebt, ofwel de redenen uiteenzetten waarom de overheid de
+        gevraagde informatie niet publiek wil of kan maken.
       </p>
 
       <p>
         Overheden zijn ook
         <a href="https://wetten.overheid.nl/jci1.3:c:BWBR0005252&hoofdstuk=III&artikel=6&z=2018-07-28&g=2018-07-28">verplicht</a>
         om binnen vier weken je verzoek te beantwoorden en ze mag hier zonodig
-        nog vier weken aan toevoegen. In totaal moet je dus binnen acht weken
+        nog twee weken aan toevoegen. In totaal moet je dus binnen zes weken
         antwoord krijgen. Het kan wel zo zijn dat het antwoord niet de
         informatie bevat waar je om vroeg.
       </p>
 
       <p>
-        Sommige overheden, meestal gemeentes, hebben ervoor gekozen om
-        elektronisch verstuurde Woo-verzoeken niet in behandeling te nemen. Wij
-        vinden dat dit niet meer van deze tijd is en verwachten dat het aantal
-        overheidsinstanties dat verzoeken per mail weigert snel zal afnemen.
+        Sommige overheden, meestal gemeenten, hebben ervoor gekozen om
+        elektronisch verstuurde Woo-verzoeken alleen via een speciaal
+        contactformulier in behandeling te nemen. Wij werken er hard aan om te
+        zorgen dat zij Woo-verzoeken vanaf deze site ook accepteren.
       </p>
 
     </dd>
