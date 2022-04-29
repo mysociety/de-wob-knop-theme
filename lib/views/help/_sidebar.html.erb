@@ -3,14 +3,14 @@
   <h2>Hulp</h2>
 
   <ul class="no_bullets">
-    <li><%= link_to_unless_current 'Over de Wob-Knop', help_about_path %></li>
+    <li><%= link_to_unless_current 'Over de Woo-Knop', help_about_path %></li>
     <li><%= link_to_unless_current 'Wobben', help_requesting_path %></li>
     <% if feature_enabled?(:alaveteli_pro) %>
       <li><%= link_to_unless_current 'Voor journalisten', help_pro_path %></li>
     <% end %>
     <li><%= link_to_unless_current 'Privacy', help_privacy_path %></li>
     <li><%= link_to_unless_current 'Database doorzoeken', advanced_search_path %></li>
-    <li><%= link_to_unless_current 'Voor Wob-ambtenaren', help_officers_path %></li>
+    <li><%= link_to_unless_current 'Voor Woo-ambtenaren', help_officers_path %></li>
     <li><%= link_to_unless_current 'Credits', help_credits_path %></li>
     <li><%= link_to_unless_current 'Software', help_alaveteli_path %></li>
     <li><%= link_to_unless_current 'API', help_api_path %></li>

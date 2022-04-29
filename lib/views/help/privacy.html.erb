@@ -3,7 +3,9 @@
 <%= render partial: 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
-  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
+  <h1 id="privacy">
+    <%= @title %> <a href="#privacy">#</a>
+  </h1>
 
   <p>
     Hier kan je lezen over het gebruik van je gegevens. Als je vragen hebt,
@@ -11,27 +13,33 @@
   </p>
 
   <dl>
-    <dt id="email_address">Wie krijgt mijn e-mailadres te zien? <a href="#email_address">#</a> </dt>
+    <dt id="email_address">
+      Wie krijgt mijn e-mailadres te zien?
+      <a href="#email_address">#</a>
+    </dt>
     <dd>
       <p>
         Wij zullen alleen je e-mailadres gebruiken als we daartoe wettelijk
         verplicht zijn of als jij het ons vraagt. Je e-mailadres is dus ook
-        niet te zien voor de overheidsinstantie waaraan je je Wob-verzoek
-        richt. Je Wob-verzoek wordt verstuurd vanaf een specifiek voor het
+        niet te zien voor de overheidsinstantie waaraan je je Woo-verzoek
+        richt. Je Woo-verzoek wordt verstuurd vanaf een specifiek voor het
         individuele verzoek aangemaakt
         @<%= AlaveteliConfiguration::incoming_email_domain %> e-mailadres.
       </p>
       <p>
-        Als je een bericht stuurt naar een andere gebruiker van de Wob-Knop zal
+        Als je een bericht stuurt naar een andere gebruiker van de Woo-Knop zal
         je eigen, persoonlijke e-mailadres wél zichtbaar zijn. Dit om misbruik
         te voorkomen. Je wordt daar vóór het versturen aan herinnerd.
       </p>
     </dd>
 
-    <dt id="nasty_spam">Gaan jullie mijn inbox vullen met spam? <a href="#nasty_spam">#</a> </dt>
+    <dt id="nasty_spam">
+      Gaan jullie mijn inbox vullen met spam?
+      <a href="#nasty_spam">#</a>
+    </dt>
     <dd>
       <p>
-        Nee, eenmaal aangemeld bij de Wob-Knop sturen we alleen e-mailberichten
+        Nee, eenmaal aangemeld bij de Woo-Knop sturen we alleen e-mailberichten
         die verband houden met vragen die je stelt, een e-mailnotificatie
         waarvoor je je eventueel hebt ingeschreven, of andere redenen waarvoor
         je expliciet goedkeuring geeft. We zullen nooit je e-mailadres
@@ -40,31 +48,41 @@
       </p>
     </dd>
 
-    <dt id="public_request">Waarom verschijnen mijn naam en Wob-verzoek op de website? <a href="#public_request">#</a> </dt>
+    <dt id="public_request">
+      Waarom verschijnen mijn naam en mijn Woo-verzoek(en) op de website?
+      <a href="#public_request">#</a>
+    </dt>
     <dd>
       <p>
         Door je echte naam te gebruiken ben je gemakkelijker terug te vinden
         door mensen die je willen helpen bij je verzoek, onderzoek of campagne.
-        Bovendien helpt het gebruik van je eigen naam misbruik van de Wob-Knop
-        voorkomen.
+        Bovendien helpt het gebruik van je eigen naam misbruik van de Woo-Knop
+        voorkomen. Zet geen informatie in je Wob-verzoek waarvan je niet wilt
+        dat deze openbaar wordt.
       </p>
       <p>
-        We publiceren je Wob-verzoek zodat iedereen toegang heeft tot het door
-        jou verzonden Wob-verzoek en de ingewonnen informatie en documenten en
+        We publiceren je Woo-verzoek zodat iedereen toegang heeft tot het door
+        jou verzonden Woo-verzoek en de ingewonnen informatie en documenten en
         deze ook kan gebruiken. In principe verwijderen we geen informatie. Zie
-        ook: ‘<a href="#takedown">Kunnen jullie mijn persoonlijke gegevens 
+        ook: <a href="#takedown">Kunnen jullie mijn persoonlijke gegevens
           verwijderen?</a>’
       </p>
     </dd>
 
-    <dt id="real_name">Kan ik een Wob-verzoek onder een pseudoniem indienen? <a href="#real_name">#</a> </dt>
+    <dt id="real_name">
+      Kan ik een Woo-verzoek onder een pseudoniem indienen?
+      <a href="#real_name">#</a>
+    </dt>
     <dd>
       <p>
-        Nee, je moet je eigen naam gebruiken als je een Wob-verzoek doet.
+        Nee, je moet je eigen naam gebruiken als je een Woo-verzoek doet.
       </p>
     </dd>
 
-    <dt id="full_address">Ze hebben mijn postadres gevraagd! <a href="#full_address">#</a> </dt>
+    <dt id="full_address">
+      Ze hebben mijn postadres gevraagd!
+      <a href="#full_address">#</a>
+    </dt>
     <dd>
       <p>
         Als een overheidsinstantie over papieren stukken beschikt, zullen ze
@@ -73,17 +91,37 @@
       </p>
     </dd>
 
-    <dt id="postal_answer">Nee, nee, ze hebben echt per se een postadres nodig! <a href="#postal_answer">#</a> </dt>
-    <dd>
-      Indien dit niet kan of je vindt het prima om het antwoord per post te
-      ontvangen, dan kun je daar uiteraard mee akkoord gaan. Bedenk wel dat het
-      antwoord dan niet beschikbaar zal zijn voor anderen.
-    </dd>
-
-    <dt id="delete_requests">Kunnen jullie mijn verzoeken verwijderen, of mijn naam aanpassen? <a href="#delete_requests">#</a> </dt>
+    <dt id="postal_answer">
+      Nee, nee, ze hebben echt per se een postadres nodig om mijn verzoek in
+      behandeling te nemen!
+      <a href="#postal_answer">#</a>
+    </dt>
     <dd>
       <p>
-        De Wob-Knop is een permanente en publieke database met Wob-verzoeken.
+        Het is mogelijk dat de overheidsinstantie dit vraagt om vast te stellen
+        dat ze met een echt bestaande verzoeker te maken hebben. Als je
+        digitaal een Wob-verzoek doet ben je niet verplicht om deze gegevens te
+        verstrekken. Als je het prima vindt om papieren stukken per post te
+        ontvangen, dan kun je daar uiteraard mee akkoord gaan. Bedenk wel dat
+        het antwoord dan niet beschikbaar zal zijn voor anderen.
+      </p>
+
+      <p>
+        Wijs de ambtenaar erop dat je voor je communicatie over dit verzoek
+        weliswaar een door deze website gegenereerd e-mailadres gebruikt, maar
+        om via de Woo-Wob-Knop een verzoek in te dienen heb je je
+        <%= link_to 'geregistreerd', signin_path %> op de website met een uniek
+        en geverifieerd e-mailadres en met je eigen naam en gegevens.
+      </p>
+    </dd>
+
+    <dt id="delete_requests">
+      Kunnen jullie mijn verzoeken verwijderen, of mijn naam aanpassen?
+      <a href="#delete_requests">#</a>
+    </dt>
+    <dd>
+      <p>
+        De Woo-Knop is een permanente en publieke database met Woo-verzoeken.
         Een vraag die voor jou niet meer relevant lijkt, kan nog steeds nuttig
         zijn voor anderen. Ook om in te schatten of een verzoek al eerder
         ingediend en beantwoord is. Daarom verwijderen we geen verzoeken.
@@ -101,9 +139,11 @@
       </p>
     </dd>
 
-    <dt id="takedown">Kunnen jullie mijn persoonlijke gegevens verwijderen? <a href="#takedown">#</a> </dt>
+    <dt id="takedown">
+      Kunnen jullie mijn persoonlijke gegevens verwijderen?
+      <a href="#takedown">#</a>
+    </dt>
     <dd>
-
       <p>
         Als je persoonlijke info op de site terugvindt die je liever verwijderd
         of aangepast ziet, aarzel dan niet dit <%= link_to 'ons te laten

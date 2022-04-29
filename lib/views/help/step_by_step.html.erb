@@ -22,17 +22,21 @@
       <strong>Welke overheid</strong> Vraag je af bij welke overheidsinstantie
       de informatie te vinden is. Onder de knop ‘Zoek overheidsinstantie’ kun
       je de overheidsinstanties vinden die relevant zouden kunnen zijn voor
-      jouw Wob-verzoek.
+      jouw Woo-verzoek.
     </li>
 
     <li>
       <strong>Al openbaar?</strong> Check of de informatie al openbaar gemaakt
-      is. Overheden publiceren namelijk ook allerlei informatie uit eigen
-      beweging op hun website. Doorzoek bijvoorbeeld eerder ‘gewobte’
-      overheidsdocumenten op <a
+      is. Overheden moeten  namelijk ook overheidsinformatie uit eigen beweging
+      publiceren, dit wordt ‘actieve openbaarmaking’ genoemd en wordt ook
+      geregeld in de Woo. Het is de bedoeling dat alle Nederlandse overheden
+      uit eigen beweging documenten beschikbaar gaan maken via één landelijke
+      site, ook wel <a href="https://open.overheid.nl/">PLOOI</a> genoemd. Maar
+      denk ook aaneerder opgevraagdeoverheidsdocumenten die gepubliceerd zijn op
+      <a
         href="https://www.rijksoverheid.nl/documenten">rijksoverheid.nl</a>
-      maar ook andere overheidswebsites bevatten soms een overzicht van
-      openbaar gemaakte documenten, zoals de <a
+      en andere overheidswebsites die openbaar gemaakte documenten publiceren,
+      zoals de <a
         href="https://www.politie.nl/themas/wet-openbaarheid-van-bestuur-wob.html">politie</a>
       of het <a
         href="https://www.om.nl/organisatie/wet-openbaarheid/openbaar-gemaakte/">Openbaar
@@ -40,18 +44,19 @@
     </li>
 
     <li>
-      <strong>Al op de Wob-Knop?</strong> Doorzoek de database met eerdere
-      Wob-verzoeken die via de Wob-Knop zijn gedaan om te kijken of iemand
+      <strong>Al op de Woo-Knop?</strong> Doorzoek de database met eerdere
+      Woo-verzoeken die via de Woo-Knop zijn gedaan om te kijken of iemand
       anders de documenten die je zoekt al ontvangen heeft.
     </li>
   </ul>
 
   <h2 id="step-1">
-    Stap 1. Naar de Wob-Knop
+    Stap 1. Naar de Woo-Knop
   </h2>
 
   <p>
-    Klik in de menu-balk op ‘Doe een verzoek’.
+    Klik in de menu-balk op
+    ‘<%= link_to 'Doe een verzoek', select_authority_path %>’.
   </p>
 
   <h2 id="step-2">
@@ -63,7 +68,7 @@
     precies weet hoe de overheidsinstantie heet, of bij welke overheid de
     informatie te vinden is, kun je ook andere zoektermen gebruiken. Je krijgt
     nu een lijst met een of meer zoekresultaten te zien. Je zult zien dat er
-    veel meer organisaties onder de werking van de Wob vallen dan je dacht!
+    veel meer organisaties onder de werking van de Woo vallen dan je dacht!
     Kies een overheidsinstantie uit de lijst en klik ernaast op de knop ‘Doe
     een verzoek’.
   </p>
@@ -77,18 +82,18 @@
   </h2>
 
   <p>
-    Vul in het bovenste vakje een korte omschrijving van je Wob-verzoek in,
+    Vul in het bovenste vakje een korte omschrijving van je Woo-verzoek in,
     niet meer dan één regel. Dit is het onderwerp van je verzoek. Bedenk dat je
     alleen informatie kunt vragen die iets te maken heeft met de taken van de
     overheid, niet over privé-aangelegenheden van ambtenaren.
-
   </p>
 
   <p>
     De site zal mogelijk suggesties doen van
-    <%= link_to 'bestaande Wob-verzoeken', request_list_all_path(anchor: 'results') %>
+    <%= link_to 'bestaande Woo-verzoeken',
+      request_list_all_path(anchor: 'results') %>
     dezelfde titel. Hieruit kun je inspiratie opdoen voor je eigen omschrijving
-    of zelfs, toch nog, de informatie vinden die je zoch.
+    of zelfs, toch nog, de informatie vinden die je zocht.
   </p>
 
   <h2 id="step-4">
@@ -102,7 +107,7 @@
   <ol>
     <li>
       <p>
-        ‘Alles wat je op deze pagina invult, ook <strong>je naam</strong>,
+        Alles wat je op deze pagina invult, ook <strong>je naam</strong>,
         verschijnt <strong>voor iedereen zichtbaar</strong> op deze site, voor
         altijd.
       </p>
@@ -110,20 +115,20 @@
       <p>
         Op die manier voorkomen we dubbele verzoeken en zorgen we dat
         geopenbaarde informatie voor iedereen toegankelijk is. Er kunnen
-        uitzonderlijke redenen zijn om niet met je echte naam zichtbaar te zijn
-        op deze website.’ [journalisten]
+        uitzonderlijke redenen zijn om niet met je echte naam zichtbaar te
+        willen zijn.
       </p>
     </li>
 
     <li>
       <p>
-        <strong>‘Kan ik informatie over mezelf vragen?</strong>
+        <strong>Kan ik informatie over mezelf vragen?</strong>
       </p>
 
       <p>
-        Nee, het is niet verstandig om informatie over jezelf via de Wob-Knop
+        Nee, het is niet verstandig om informatie over jezelf via de Woo-Knop
         op te vragen. Dergelijke informatie past niet bij het publiek
-        toegankelijke karakter van deze website.’
+        toegankelijke karakter van deze website.
       </p>
     </li>
   </ol>
@@ -138,58 +143,18 @@
 
   <p>
     In het grote vak schrijf je je verzoek. Er staan al een aantal tekstblokjes
-    die in elk Wob-verzoek nuttig zijn. In de ruimte ertussen schrijf je op
+    die in elk Woo-verzoek nuttig zijn. In de ruimte ertussen schrijf je op
     welke informatie of specifieke documenten je zoekt.
   </p>
 
   <p>
-    Houd je voor een effectief Wob-verzoek aan de volgende adviezen:
+    Zie de <%= link_to 'veelgestelde vragen', help_faqs_path %> voor meer tips.
   </p>
 
-  <li>
-    Vraag waar mogelijk naar <strong>documenten</strong>, in plaats van naar
-    informatie
-  </li>
-
-  <li>
-    Wees <strong>nauwkeurig</strong> en <strong>duidelijk</strong>, de
-    ambtenaar die je verzoek behandelt moet het kunnen begrijpen.
-  </li>
-
-  <li>
-    <strong>Beperk je tot het informatieverzoek</strong>, meningen over het
-    beleid en de redenen voor je verzoek horen niet in het verzoek thuis.
-  </li>
-
-  <li>
-    Houd je verzoek <strong>zo kort mogelijk</strong>.
-  </li>
-
-  <li>
-    Vraag <strong>ook niet</strong> teveel informatie tegelijk. Zo voorkom je
-    dat de beslissing op je verzoek te lang duurt omdat het overheidsorgaan je
-    verzoek als te omvangrijk betitelt.
-  </li>
-
-  <li>
-    Gebruik <strong>geen beledigende taal</strong>.
-  </li>
-
-  <li>
-    Schrijf niets waarvan je niet wil dat het gepubliceerd wordt. Wijd niet uit
-    over <strong>persoonlijke problemen of informatie</strong>. Alle verzoeken
-    worden immers gepubliceerd op de site.
-  </li>
-
-  <li>
-    Het is <strong>niet verplicht om de reden of het belang van je
-      verzoek</strong> te geven, je hoeft hier dus niets over te vermelden en
-    ook later geen verantwoording over af te leggen.
-  </li>
-
   <p>
-    Zie de <%= link_to 'veelgestelde vragen', help_faqs_path %> voor een verdere
-    toelichting op enkele van deze adviezen.
+    Je kunt voor het genereren van je Woo-verzoek ook gebruik maken van de
+    Woo-generator. Kopieer dan na het opslaan van het document de tekst van je
+    verzoek en plak de tekst in het grote vak.
   </p>
 
   <h2 id="step-6">
@@ -198,6 +163,8 @@
 
   <p>
     Schrijf je voornaam (of je voorletters) en je achternaam onderaan de brief.
+    Bij het digitaal indienen van een Woo-verzoek zoals via de Woo-Knop is een
+    handtekening niet nodig.
   </p>
 
   <h2 id="step-7">
@@ -219,7 +186,7 @@
   </p>
 
   <p>
-    Gebruik je de Wob-Knop voor het eerst?
+    Gebruik je de Woo-Knop voor het eerst?
     <%= link_to 'Meld je dan', signin_path %> aan als gebruiker. Vul in ieder
     geval je naam, voornaam, e-mailadres en wachtwoord in. Er zal dan een
     bevestigingsmail naar je e-mailadres worden gestuurd. Klik op de
@@ -231,6 +198,47 @@
     Zie voor andere zaken waar je tegenaan kunt lopen in deze fase de
     <%= link_to 'Veelgestelde Vragen-pagina', help_faqs_path %>
   </p>
+
+  <li>
+    Vraag waar mogelijk naar <strong>documenten</strong>, in plaats van naar
+    informatie. Onder ‘documenten’ vallen alle ‘gegevensdragers’ zoals digitale
+    bestanden, e-mails, databestanden, sms’jes en WhatsAppjes.
+  </li>
+
+  <li>
+    Wees <strong>nauwkeurig</strong> en <strong>duidelijk</strong>, de
+    ambtenaar die je verzoek behandelt moet het kunnen begrijpen.
+  </li>
+
+  <li>
+    <strong>Beperk je tot het informatieverzoek</strong>, meningen over het
+    beleid en de redenen voor je verzoek horen niet in het verzoek thuis.
+  </li>
+
+  <li>
+    Houd je verzoek <strong>zo kort mogelijk</strong>.
+  </li>
+
+  <li>
+    Vraag <strong>ook niet</strong> teveel informatie tegelijk. Zo voorkom je
+    dat de beslissing op je verzoek te lang duurt.
+  </li>
+
+  <li>
+    Gebruik <strong>geen beledigende taal</strong>.
+  </li>
+
+  <li>
+    Schrijf niets waarvan je niet wilt dat het gepubliceerd wordt. Wijd niet uit
+    over <strong>persoonlijke problemen of informatie</strong>. Alle verzoeken
+    worden immers gepubliceerd op de site.
+  </li>
+
+  <li>
+    Het is <strong>niet verplicht om de reden of het belang van je
+      verzoek</strong> te geven, je hoeft hier dus niets over te vermelden en
+    ook later geen verantwoording over af te leggen.
+  </li>
 
   <div id="hash_link_padding"></div>
 </div>

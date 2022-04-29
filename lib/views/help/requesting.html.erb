@@ -1,4 +1,4 @@
-<% @title = 'Wob-Knop gebruiken' %>
+<% @title = 'Woo-Knop gebruiken' %>
 
 <%= render partial: 'sidebar' %>
 
@@ -7,21 +7,20 @@
     <%= @title %> <a href="#making_requests">#</a>
   </h1>
 
-
   <p>
-    Het indienen van een Wob-verzoek wordt ‘wobben’ genoemd. Met de Wob-Knop is
-    wobben heel simpel: je kiest een overheidsinstantie, je beschrijft wat je
-    precies wil weten en je drukt op de Wob-Knop! Je verzoek wordt automatisch
-    naar het juiste e-mailadres gestuurd.
+    Met de Woo-Knop is een Woo-verzoek indienen heel simpel: je kiest een
+    overheidsinstantie, je beschrijft wat je precies wil weten en je drukt op
+    de Woo-Knop! Je verzoek wordt automatisch naar het juiste e-mailadres
+    gestuurd.
   </p>
 
   <% if feature_enabled? :alaveteli_pro %>
     <p>
-    De overheid is verplicht om binnen vier weken je verzoek te beantwoorden.
-    Het antwoord en de documenten met de informatie waar je om hebt gevraagd
-    worden op de Wob-Knop website gepubliceerd. Iedereen kan vanaf dat moment
-    de documenten raadplegen en downloaden, tenzij je er als journalist voor
-    hebt gekozen je verzoek
+    De overheid is verplicht om binnen vier tot zes weken je verzoek te
+    beantwoorden. Het antwoord en de documenten met de informatie waar je om
+    hebt gevraagd worden op de Woo-Knop website gepubliceerd. Iedereen kan
+    vanaf dat moment de documenten raadplegen en downloaden, tenzij je er als
+    journalist via de Pro-versie voor hebt gekozen je verzoek
     <%= link_to 'af te schermen', help_pro_path(anchor: 'private-requests') %>.
     </p>
   <% end %>
@@ -29,52 +28,63 @@
   <p>
     We hebben op de
     <%= link_to 'Hoe het werkt-pagina', help_step_by_step_path %> een
-    handleiding gemaakt om effectief gebruik te maken van de Wob-Knop, klik 
+    handleiding gemaakt om effectief gebruik te maken van de Woo-Knop, klik
     <%= link_to 'hier', help_step_by_step_path(anchor: 'step-1') %> voor deze
     stap-voor-stap uitleg.
   </p>
 
 
   <dl>
-    <dt id="focused">Welke informatie wil ik opvragen? <a href="#focused">#</a> </dt>
+    <dt id="focused">
+      Welke informatie wil ik opvragen?
+      <a href="#focused">#</a>
+    </dt>
     <dd>
       <p>
-        Check eerst of de informatie die je zoekt niet al eerder openbaar
-        gemaakt is. Want dan hoef je geen Wob-verzoek in te dienen. Overheden
-        publiceren ook informatie uit eigen beweging op hun website. Doorzoek
-        bijvoorbeeld eerder gewobte overheidsdocumenten op rijksoverheid.nl
-        maar ook andere overheidswebsites bevatten soms een overzicht van
-        openbaar gemaakte documenten, zoals de politie of het Openbaar
-        Ministerie.
+        Het is de bedoeling dat alle Nederlandse overheden uit eigen beweging
+        documenten beschikbaar gaan maken via één landelijke site, ook wel
+        <a href="https://open.overheid.nl/">PLOOI</a> genoemd. Sommige
+        overheden publiceerden al informatie op hun eigen website, waaronder
+        Wob- en Woo-besluiten inclusief de opgevraagde stukken. Check dus eerst
+        of de informatie die je zoekt niet al eerder openbaar gemaakt is. Want
+        dan hoef je geen Woo-verzoek in te dienen.
       </p>
 
       <p>
-        Doorzoek ook de database met eerdere Wob-verzoeken die via de Wob-Knop
-        zijn ingediend om te kijken of iemand anders de documenten die je zoekt
-        al ontvangen heeft.
+        Doorzoek ook de database met verzoeken die via de Woo-Knop zijn
+        ingediend om te kijken of iemand anders de documenten die je zoekt al
+        ontvangen heeft.
       </p>
 
       <p>
         Denk vervolgens goed na over welke informatie je zoekt. Je kunt alleen
         informatie opvragen die in documenten is vastgelegd, dus vraag je af
         welke soorten documenten dat kunnen zijn. Een rapport, verslag, agenda?
-        Als je precies weet welke documenten je zoekt, vraag dan in ieder geval
-        naar die specifieke documenten. Weet je dat niet, probeer het onderwerp
-        waarover je documenten zoekt dan zo helder en precies mogelijk te
-        omschrijven.
+        Als je precies weet welke documenten je zoekt, vraag dannaar die
+        specifieke documenten. Weet je dat niet, probeer het onderwerp waarover
+        je documenten zoekt dan zo helder en precies mogelijk te omschrijven.
+        Denk daarbij ook aan het benoemen van een bepaalde periode.
       </p>
     </dd>
 
-    <dt id="data_protection">Kan ik informatie over mezelf vragen? <a href="#data_protection">#</a> </dt>
+    <dt id="data_protection">
+      Kan ik informatie over mezelf vragen?
+      <a href="#data_protection">#</a>
+    </dt>
     <dd>
       <p>
-        Het is niet verstandig om informatie over jezelf via de Wob-Knop
-        op te vragen. Dergelijke informatie past niet bij het publiek
-        toegankelijke karakter van deze website.
+        Het is niet verstandig om informatie over jezelf via de Woo-Knop op te
+        vragen. Dergelijke informatie past niet bij het publiek toegankelijke
+        karakter van deze website. Realiseer je in ieder geval dat via de Woo
+        in principe informatie voor een ieder openbaar wordt gemaakt en dus
+        niet alleen voor de indiener.
       </p>
     </dd>
 
-    <dt id="which_authority">Bij welke overheidsinstantie moet ik zijn? <a href="#which_authority">#</a> </dt>
+    <dt id="which_authority">
+      Bij welke overheidsinstantie moet ik zijn?
+      <a href="#which_authority">#</a>
+    </dt>
     <dd>
       <p>
         Vraag je af bij welke overheidsinstantie de informatie die je zoekt
@@ -88,64 +98,70 @@
         inspectiediensten, maar ook zogenaamde ‘zelfstandige bestuursorganen’
         zoals de <a href="https://www.svb.nl/nl/">Sociale Verzekeringsbank</a>
         (SVB) en het <a href="https://www.cbr.nl/">Centraal Bureau
-        Rijvaardigheidsbewijzen </a>(CBR). Deze instanties zijn allemaal
-        ‘wobbaar’. En elk jaar komen er overheidsinstanties bij en verdwijnen
-        er een aantal, of ze veranderen van naam. Bijvoorbeeld gemeenten die
-        fuseren en het ministerie van Justitie en Veiligheid dat eerst het
-        ministerie van Veiligheid en Justitie was. Maar op een gemiste
-        naamswijziging zal je Wob-verzoek niet stuklopen, al is het een kleine
-        moeite om de formele naam even te checken.
+        Rijvaardigheidsbewijzen</a> (CBR). Bij al deze instanties kan je een
+        Woo-verzoek indienen. En elk jaar komen er overheidsinstanties bij en
+        verdwijnen er een aantal of ze veranderen van naam,bijvoorbeeld
+        gemeenten die fuseren en het ministerie van Justitie en Veiligheid dat
+        eerst het ministerie van Veiligheid en Justitie was. Maar op een
+        gemiste naamswijziging zal je Woo-verzoek niet stuklopen, al is het een
+        kleine moeite om de formele naam nog even te dubbelchecken.
       </p>
 
       <p>
-        Ook 'publiekrechtelijke instellingen' zoals TNO of de Wageningen
-        Universiteit kun je wobben. Maar als je je Wob-verzoek indient bij het
-        overheidsorgaan onder wiens verantwoordelijkheid de publiekrechtelijke
-        instelling valt, zit je al goed. Het kan overigens geen kwaad om de
-        verantwoordelijke overheidsinstantie op de verantwoordelijkheid te
-        wijzen in je Wob-verzoek én te vragen om je Wob-verzoek indien nodig
-        door te sturen.
+        Ook bij 'publiekrechtelijke instellingen' zoals TNO of de Wageningen
+        Universiteit kun je een Woo-verzoek indienen . Maar als je je
+        Woo-verzoek indient bij het overheidsorgaan onder wiens
+        verantwoordelijkheid deze publiekrechtelijke instelling valt, zit je
+        ook al goed. Het kan overigens geen kwaad om de verantwoordelijke
+        overheidsinstantie op deze verantwoordelijkheid te wijzen in je
+        Woo-verzoek én te vragen om je Woo-verzoek indien nodig door te sturen.
       </p>
 
       <p>
         Weet je niet zeker of de documenten bijvoorbeeld bij de Immigratie en
         Naturalisatiedienst (IND) of het ministerie van Justitie en Veiligheid
-        liggen, wob ook dan de ‘hoogste’ instantie. In dit voorbeeld het
-        Ministerie. Daar staat tegenover dat instanties die minder onder een
-        vergrootglas liggen soms makkelijker documenten vrijgeven. Denk dus na
-        over waar je de meeste kans maakt!
+        liggen, dien je Woo-verzoek dan in bij de ‘hoogste’ instantie. In dit
+        voorbeeld het ministerie. Daar staat tegenover dat instanties die
+        minder onder een vergrootglas liggen soms makkelijker documenten
+        vrijgeven. Denk dus ook na over waar je de meeste kans maakt.
       </p>
 
       <p>
-        Tot slot, je kunt sowieso ook je Wob-verzoek bij meerdere instanties
-        tegelijk indienen. Het kan dan netjes zijn om dat in je Wob-verzoek te
-        melden.
+        Tot slot, je kunt je Woo-verzoek bij meerdere instanties tegelijk
+        indienen. Het kan netjes zijn om dat in je Woo-verzoek te melden.
       </p>
 
     </dd>
 
-    <dt id="missing_body">Staat jouw overheidsinstantie er niet bij? <a href="#missing_body">#</a> </dt>
+    <dt id="missing_body">
+      Staat jouw overheidsinstantie er niet bij?
+      <a href="#missing_body">#</a>
+    </dt>
     <dd>
       <p>
-        In 2020 is de Wob-Knop van start gegaan met alléén de e-mailadressen
+        In 2020 is de Woo-Knop van start gegaan met alléén de e-mailadressen
         van de 355 Nederlandse gemeenten. We hebben er toen namelijk voor
-        gekozen om eerst kennis en ervaring op te doen met het via de Wob-Knop
-        ‘wobben’ van gemeenten en daarna stap voor stap uit te breiden. Onze
-        verwachting is dat we halverwege 2020 de e-mailadressen van de
-        provincies, waterschappen en ministeries zullen toevoegen. Wil je hier
-        meer over weten of helpen? Neem dan
+        gekozen om eerst kennis en ervaring op te doen met het via de Woo-Knop
+        indienen van verzoeken bij gemeenten en daarna stap voor stap uit te
+        breiden. Onze verwachting is dat we halverwege 2022 de e-mailadressen
+        van de provincies, waterschappen, ministeries en zoveel mogelijk andere
+        overheidinstanties zullen toevoegen. Wil je hier meer over weten of
+        helpen? Neem dan
         <%= link_to 'contact', help_contact_path %> met ons op.
       </p>
 
     </dd>
 
-    <dt id="quickly_response">Hoe snel krijg ik antwoord? <a href="#quickly_response">#</a> </dt>
+    <dt id="quickly_response">
+      Hoe snel krijg ik antwoord?
+      <a href="#quickly_response">#</a>
+    </dt>
     <dd>
       <p>
         De overheid is
         <a href="https://wetten.overheid.nl/jci1.3:c:BWBR0005252&hoofdstuk=III&artikel=6&z=2018-07-28&g=2018-07-28">verplicht</a>
         om binnen vier weken je verzoek te beantwoorden en mag hier zonodig nog
-        vier weken aan toevoegen. In totaal moet je dus uiterlijk binnen acht
+        twee weken aan toevoegen. In totaal moet je dus uiterlijk binnen acht
         weken antwoord krijgen. Het kan wel zo zijn dat het antwoord niet de
         informatie bevat waar je om vroeg.
       </p>

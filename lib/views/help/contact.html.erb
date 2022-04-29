@@ -8,7 +8,7 @@
   <h2>Vereniging van onderzoeksjournalisten</h2>
   <% if !flash[:notice] %>
     <p>
-      De Wob-Knop is een initiatief van de
+      De Woo-Knop is een initiatief van de
       <%= link_to 'Vlaams-Nederlandse Vereniging van Onderzoeksjournalisten (VVOJ)',
       'https://www.vvoj.org' %> en afgeleid van de succesvolle Britse website
       <%= link_to 'WhatDoTheyKnow.com', 'https://www.whatdotheyknow.com' %>.
@@ -48,7 +48,7 @@
 
   <% if !@last_request.nil? %>
     <p>
-      <label class="form_label" for="contact_message">Voeg link naar Wob-verzoek toe:</label>
+      <label class="form_label" for="contact_message">Voeg link naar Woo-verzoek toe:</label>
       <%= request_link(@last_request) %>
       <%= submit_tag "verwijder", :name => 'remove' %>
     </p>
@@ -64,7 +64,7 @@
 
   <p class="form_note">
     We kunnen je alleen helpen met technische problemen, of algemene vragen
-    over Wob-verzoeken en de Wet openbaarheid van bestuur.
+    over Woo-verzoeken en de Wet openbaarheid van bestuur.
   </p>
 
   <div class="form_button">

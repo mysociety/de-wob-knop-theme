@@ -1,4 +1,4 @@
-<% @title = 'Making requests' %>
+<% @title = 'Wie heeft de Woo-Knop ontwikkeld?' %>
 
 <%= render partial: 'sidebar' %>
 
@@ -6,7 +6,7 @@
   <% if params[:country_name] %>
     <h1><%= _('Would you like to see a website like this in your country?') %></h1>
   <% else %>
-    <h1>Wie heeft de Wob-Knop ontwikkeld?</h1>
+    <h1><%= @title %></h1>
   <% end %>
 
   <p>
