@@ -5,13 +5,18 @@
 <h1><%= @title %></h1>
 
 <div id="contact_preamble" class="contact_preamble">
-  <h2>Vereniging van onderzoeksjournalisten</h2>
+  <h2>SPOON – experticecentrum voor Woo-verzoekers</h2>
   <% if !flash[:notice] %>
     <p>
-      De Woo-Knop is een initiatief van de
+      De Woo-Knop is in 2019/2020 tot stand gekomen op initiatief van de
       <%= link_to 'Vlaams-Nederlandse Vereniging van Onderzoeksjournalisten (VVOJ)',
       'https://www.vvoj.org' %> en afgeleid van de succesvolle Britse website
       <%= link_to 'WhatDoTheyKnow.com', 'https://www.whatdotheyknow.com' %>.
+    </p>
+    <p>
+      Vanaf 1 mei 2023 wordt de Woo-Knop beheerd door 
+      <%= link_to 'SPOON, het expertisecentrum voor Woo-verzoekers',
+      'https://expertisecentrumspoon.nl/' %>.
     </p>
   <% end %>
 </div>
