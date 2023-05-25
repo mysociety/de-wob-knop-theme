@@ -780,7 +780,7 @@ a.link_to_this {
 dt {
   font-weight: 700;
   @include respond-min( $main_menu-mobile_menu_cutoff ){
-    font-size: 2em;
+    font-size: 1.3em;
     line-height: 1.1em;
   }
 }

@@ -6,7 +6,7 @@
     <li><%= link_to_unless_current 'Over de Woo-Knop', help_about_path %></li>
     <li><%= link_to_unless_current 'Wobben', help_requesting_path %></li>
     <% if feature_enabled?(:alaveteli_pro) %>
-      <li><%= link_to_unless_current 'Voor journalisten', help_pro_path %></li>
+      <li><%= link_to_unless_current 'Voor Pro-gebruikers', help_pro_path %></li>
     <% end %>
     <li><%= link_to_unless_current 'Privacy', help_privacy_path %></li>
     <li><%= link_to_unless_current 'Database doorzoeken', advanced_search_path %></li>

@@ -1,4 +1,4 @@
-<% @title = 'Voor journalisten' %>
+<% @title = 'Voor Pro-gebruikers' %>
 
 <%= render partial: 'sidebar' %>
 
@@ -19,17 +19,11 @@
 
   <p>
     De Woo-Knop is in Europa een van de eerste websites waarop deze functies
-    gebruikt kunnen worden. Als je vragen of opmerkingen hebt, neem gerust
+    gebruikt kunnen worden. Op dit moment zijn aan zo’n account geen kosten 
+    verbonden. Pro-gebruikers kunnen zich bij de beheerders melden om een 
+    <%= link_to 'Pro-account', account_request_index_path %> te
+    krijgen. Ook als je vragen of opmerkingen hebt, neem gerust
     <%= link_to 'contact met ons op', help_contact_path %>.
-  </p>
-
-  <p>
-    Voor journalisten biedt de Woo-Knop je de Pro-versie met
-    <%= link_to 'twee extraspeciale functies', help_pro_path %>: afgeschermde
-    verzoeken en bulkverzoeken. Journalisten kunnen zich bij de beheerders
-    melden om een <%= link_to 'Pro-account', account_request_index_path %> te
-    krijgen. Op dit moment zijn aan zo’n account geen kosten verbonden.
-    Journalisten kunnen zich melden
   </p>
 
   <h2 id="private-requests">
