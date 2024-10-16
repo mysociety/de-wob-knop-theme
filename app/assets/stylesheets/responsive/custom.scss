@@ -601,6 +601,13 @@ p.locale-list-trigger {
   }
 }
 
+/* New request */
+
+#request_new .advice-panel--warning {
+  background-color: #f6c9c9;
+  border-color: #b94a48;
+}
+
 /* Request page */
 .request-header__action-bar__actions {
   .action-menu__button {
