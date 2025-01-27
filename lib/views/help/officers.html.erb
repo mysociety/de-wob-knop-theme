@@ -104,7 +104,7 @@
     aan uw overheidsinstantie op één bepaald e-mailadres te ontvangen. U kunt
     controleren welk van uw e-mailadressen wij gebruiken om verzoeken naar u te
     versturen via de link ‘Bekijk het e-mailadres voor een Woo-verzoek’ op de
-    pagina over uw <%= link_to 'overheidsinstantie', request_list_all_path %>
+    pagina over uw <%= link_to 'overheidsinstantie', request_list_path %>
     op de Woo-Knop.
     Gelieve ons te <%= link_to 'contacteren', help_contact_path %> indien dit
     adres niet klopt en we een ander e-mailadres moeten gebruiken.
@@ -158,7 +158,7 @@
   <p>
     Wanneer een verzoek
     <%= link_to 'op de website verschijnt',
-      request_list_all_path(anchor: 'results') %>,
+      request_list_path(anchor: 'results') %>,
     hebben wij geprobeerd het Woo-verzoek door te sturen naar de juiste
     overheidsinstelling. Alle foutmeldingen (‘delivery failure’ e.d.)
     verschijnen automatisch op de website. U kunt controleren welk van uw
